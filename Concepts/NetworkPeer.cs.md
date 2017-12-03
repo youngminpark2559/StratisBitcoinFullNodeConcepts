@@ -1,9 +1,5 @@
 **Folder StratisBitcoinFullNode\src\Stratis.Bitcoin\P2P\Peer\ **
 
-**File StratisBitcoinFullNode\src\Stratis.Bitcoin\P2P\Peer\NetworkPeer.cs **
-
-
-
 **File StratisEdited\src\Stratis.Bitcoin\P2P\PeerConnector.cs **
 
 ---
