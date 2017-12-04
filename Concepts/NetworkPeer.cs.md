@@ -197,3 +197,64 @@ internal NetworkAddress FindPeerToConnectTo() { }
 
 ---
 
+** File StratisEdited\src\Stratis.Bitcoin\P2P\PeerDiscoveryLoop.cs **
+
+---
+
+
+This class is for Async loop that discovers new peers to connect to.
+
+public sealed class PeerDiscoveryLoop : IDisposable { }
+
+
+---
+
+This field is for The async loop which we need to wait upon before we can shut down this connector.
+
+private IAsyncLoop asyncLoop;
+
+
+---
+
+This field is for Factory for creating background async loop tasks.
+
+private readonly IAsyncLoopFactory asyncLoopFactory;
+
+---
+
+This field is for Global application life cycle control - triggers when application shuts down.
+
+private readonly INodeLifetime nodeLifetime;
+
+---
+
+This field is for Peer address manager instance, see "IPeerAddressManager".
+
+private readonly IPeerAddressManager peerAddressManager;
+
+---
+
+This field is for The amount of peers to find.
+
+private readonly int peersToFind;
+
+---
+
+This field represents The network the node is running on.
+
+private readonly Network network;
+
+---
+
+This field is for Factory for creating P2P network peers.
+
+private readonly INetworkPeerFactory networkPeerFactory;
+
+---
+
+This method Starts an asynchronous loop that periodicly tries to discover new peers to add to the "PeerAddressManager".
+        
+public void DiscoverPeers() { }
+
+
+---
